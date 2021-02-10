@@ -1,16 +1,14 @@
 # BitmapFontCutterPlus
-Fork of [nobuyukinyuu/BitmapFontCutter](https://github.com/nobuyukinyuu/BitmapFontCutter) with some improvements.
+Fork of [Ryhon0/BitmapFontCutterPlus](https://github.com/Ryhon0/BitmapFontCutterPlus) with some improvements.
 
 ![](addons/BitmapFontCutterPlus/screenshots/screen1.png)
 
 ![](addons/BitmapFontCutterPlus/screenshots/screen2.png)
 
 ## Improvements
-* Added an option to make non-monospaced fonts (clips characters to their bounding boxes)
-* Added an option for font spacing
-* Fixed incorrect incorrect number of columns
+* Fixed a bug that caused the an blank character and offset for every first character of the next line.
 
-## Ussage
+## Usage
 
 * Clone the plugin repo or download it from the AssetLib
 * Enable the plugin (Project > Project Settings > Plugins)
