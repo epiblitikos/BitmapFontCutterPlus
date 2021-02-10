@@ -1,16 +1,12 @@
 # BitmapFontCutterPlus
-Fork of [Ryhon0/BitmapFontCutterPlus](https://github.com/Ryhon0/BitmapFontCutterPlus) with some improvements.
+Fork of [Ryhon0/BitmapFontCutterPlus](https://github.com/Ryhon0/BitmapFontCutterPlus) which provides from-texture bitmap fonts in Godot 3.x.
 
-![](addons/BitmapFontCutterPlus/screenshots/screen1.png)
-
-![](addons/BitmapFontCutterPlus/screenshots/screen2.png)
-
-## Improvements
-* Fixed a bug that caused the an blank character and offset for every first character of the next line.
+## Goals/Reasons for Fork
+* Fix bugs
+* Add features (like multiple, disjoint ranges and/or custom char map)
 
 ## Usage
-
-* Clone the plugin repo or download it from the AssetLib
-* Enable the plugin (Project > Project Settings > Plugins)
-* Create a new `CutBitmapFont` resource (Right click in filesystem > New Resource > CutBitmapFont)
-* Select the resource in filesystem and edit the properties in the inspector
+1. Clone the plugin repo or download it from the AssetLib. (Make sure it's in `res://addons/`.)
+2. Enable the plugin (via Project > Project Settings > Plugins).
+3. Create a new `CutBitmapFont` resource (Right-click in File System > New Resource > CutBitmapFont)
+4. Select the resource in File System and edit the properties in the Inspector.
