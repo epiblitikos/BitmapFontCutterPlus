@@ -5,13 +5,13 @@ extends BitmapFont
 var index = 0
 export(Vector2) var glyph_size = Vector2(8,8) setget change_glyph_size
 export(Texture) var texture_to_cut = null setget change_texture
-export(int, 255) var start_char = 32 setget change_start_char
+export(String, MULTILINE) var character_map setget change_character_map
 export(float) var spacing = 1 setget change_spacing
 export(bool) var monospaced = true setget change_monospaced
 
 
-func change_start_char(value):
-    start_char = value
+func change_character_map(value):
+    character_map = value
     update()
 
 
@@ -91,6 +91,10 @@ func update():
         var chars_wide = texture_to_cut.get_width() / glyph_size.x
         var chars_high = texture_to_cut.get_height() / glyph_size.y
         var char_offset = 0
+        
+        # Take the line breaks out. Allowing them is easy on the end user.
+        #  This obviously means no custom char for it.
+        var compact_char_map = character_map.replace("\n", "").replace("\r", "")
 
         clear()
         add_texture(texture_to_cut)
@@ -100,7 +104,7 @@ func update():
             for col in range(chars_wide):
                 var region = _get_char_region(col, row)
                 add_char(
-                    start_char + char_offset,
+                    compact_char_map.ord_at(char_offset),
                     0,
                     region,
                     Vector2.ZERO,
